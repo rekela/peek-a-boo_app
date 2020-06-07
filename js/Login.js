@@ -12,7 +12,7 @@ const Login = () => {
                 <img src={'./assets/akuku_login.jpg'}/>
             </div>
             <div className={'form-container'}>
-                <form style={{ color: textColor}}>
+                <form>
                     <input className={'form-input'} type="text" name="login" placeholder="username" />
                     <input className={'form-input'} type="password" name="password" placeholder="password" />
                     <button className={'btn'} type="submit">Zaloguj</button>
