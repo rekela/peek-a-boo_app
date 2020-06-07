@@ -5,35 +5,17 @@ const textColor = '#676767';
 const Login = () => {
     return (
         <>
-            <div style={{
-                backgroundColor: mainColor,
-                color: textColor,
-                height: 50,
-                width: 500
-            }}>
-                <span>Witaj w peek-a-boo</span>
+            <div className={'title'}>
+                <h1>Witaj w peek-a-boo</h1>
             </div>
-            <div style={{
-                height: 300,
-                width: 500
-            }}>
+            <div className={'img-container'}>
                 <img src={'./assets/akuku_login.jpg'}/>
             </div>
-            <div style={{
-                backgroundColor: mainColor,
-                height: 200,
-                width: 500
-            }}>
+            <div className={'form-container'}>
                 <form style={{ color: textColor}}>
-                    {/*<label>Login</label>*/}
-                    <input type="text" name="login" placeholder="username" style={{
-                        border: 'none'
-                    }} />
-                    {/*<label>Hasło</label>*/}
-                    <input type="password" name="password" placeholder="password" style={{
-                        border: 'none'
-                    }}/>
-                    <button type="submit">Zaloguj</button>
+                    <input className={'form-input'} type="text" name="login" placeholder="username" />
+                    <input className={'form-input'} type="password" name="password" placeholder="password" />
+                    <button className={'btn'} type="submit">Zaloguj</button>
                 </form>
             </div>
         </>
