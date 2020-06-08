@@ -38,33 +38,24 @@ export default class Calendar extends Component {
     render() {
         return (
             <>
-                <div style={{
-                    backgroundColor: mainColor,
-                    height: 70,
-                    width: 500
-                }}>
+                <div className={'title'}>
                     <img src={'./assets/logo.png'} />
                 </div>
-
-                <DayPicker
-                    selectedDays={this.state.selectedDays}
-                    onDayClick={this.handleDayClick}
-                />
-                <div style={{
-                    backgroundColor: mainColor,
-                    height: 40,
-                    width: 500
-                }}>
-                    <span>Ilość wybranych dni: {this.state.selectedDays.length} </span>
-                    <button onClick={this.handleClear}>Clear</button>
+                <div className={'day-picker-container'}>
+                    <DayPicker
+                        selectedDays={this.state.selectedDays}
+                        onDayClick={this.handleDayClick}
+                    />
                 </div>
-                <div style={{
-                    backgroundColor: mainColor,
-                    height: 40,
-                    width: 500
-                }}>
-                    <span>Zapisz nieobecność dla wskazanych dni </span>
-                    <button>Save</button>
+                <div className={'form-container'}>
+                    <div>
+                        <span>Ilość wybranych dni: {this.state.selectedDays.length} </span>
+                        <button className={'btn'} onClick={this.handleClear}>Clear</button>
+                    </div>
+                    <div>
+                        <span>Zapisz nieobecność dla wskazanych dni </span>
+                        <button className={'btn'}>Save</button>
+                    </div>
                 </div>
             </>
         );

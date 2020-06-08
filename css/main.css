@@ -69,3 +69,7 @@ img{
             padding: 10px 20px;
             margin: 15px 0;
         }
+
+.day-picker-container{
+    display: flex;
+}

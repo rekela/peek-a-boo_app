@@ -1,7 +1,5 @@
 import React from "react";
 
-const mainColor = 'rgb(255,207,65)';
-const textColor = '#676767';
 const Login = () => {
     return (
         <>
