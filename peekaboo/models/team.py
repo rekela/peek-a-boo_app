@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Group(models.Model):
+class Team(models.Model):
     name = models.CharField(max_length=32)
 
     def __str__(self):
