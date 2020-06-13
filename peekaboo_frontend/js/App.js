@@ -5,6 +5,6 @@ import Calendar from "./Calendar";
 
 
 const App = () => {
-    return <Login/>
+    return <Calendar/>
 }
 ReactDOM.render(<App />, document.getElementById("app"));
