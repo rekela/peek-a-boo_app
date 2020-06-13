@@ -1,14 +1,21 @@
 from django.contrib.auth.models import User, Group
+from peekaboo.models import Child
 from rest_framework import serializers
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['url', 'username', 'email', 'groups']
+        fields = ['id', 'username', 'email', 'groups']
 
 
 class GroupSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Group
-        fields = ['url', 'name']
+        fields = ['id', 'name']
+
+
+class ChildSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Child
+        fields = ['id', 'first_name', 'last_name']
