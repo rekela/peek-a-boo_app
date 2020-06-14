@@ -1,7 +1,8 @@
 import React from "react";
+import Child from './Child';
 
-const ChildrenList = (props) => {
-    console.log(props);
+const ChildrenList = ({children}) => {
+    console.log(children);
     return (
         <>
             <div className={'title'}>
@@ -12,7 +13,7 @@ const ChildrenList = (props) => {
                     <h1>Lista dzieci</h1>
                     <div>
                         <ul>
-                            {props.children.map(child => <li>{child}</li>)}
+                            {children.map(child => <li>{child.id}</li>)}
                         </ul>
                     </div>
                 </div>

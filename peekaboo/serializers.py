@@ -15,7 +15,7 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['id', 'name']
 
 
-class ChildSerializer(serializers.HyperlinkedModelSerializer):
+class ChildSerializer(serializers.ModelSerializer):
     class Meta:
         model = Child
-        fields = ['id', 'first_name', 'last_name']
+        fields = ['id', 'first_name', 'last_name', 'team']

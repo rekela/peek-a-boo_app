@@ -28,4 +28,4 @@ class Child(models.Model):
     additional_info = models.TextField(null=True, blank=True)
 
     def __str__(self):
-        return "{} {}".format(self.first_name, self.last_name)
+        return "{} {}, {}".format(self.first_name, self.last_name, self.team)

@@ -11,24 +11,18 @@ export class App extends Component {
     };
     componentDidMount() {
         fetch("http://127.0.0.1:8000/children-list/")
-            .then(res => res.json())
+            .then(response => response.json())
             .then(json => this.setState({ children: json.results }));
+        console.log(this.state.children);
     }
-
     render() {
-        // console.log(this.state.users);
         return (
             <div>
-                <main className="form-container">
-                    <ChildrenList children={this.state.children} />
-                </main>
+                <ChildrenList children={this.state.children} />
             </div>
 
         );
     }
 }
-// const App = () => {
-//     return <Users/>
-// }
 
 ReactDOM.render(<App />, document.getElementById("app"));
