@@ -27,5 +27,6 @@ urlpatterns = [
     path('', include(router.urls)),
     path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     path('users-list/', views.UsersList.as_view()),
-    path('children-list/', views.ChildrenList.as_view()),
+    path('children-list/', views.ChildrenList.as_view(), name='children'),
+    # path('children-list/<int:pk>/', views.ChildrenList.as_view(), name='child'),
 ]

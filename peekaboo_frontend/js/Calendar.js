@@ -38,9 +38,33 @@ export default class Calendar extends Component {
     render() {
         return (
             <>
-                <div className={'title'}>
-                    <img src={'./assets/logo.png'} />
-                </div>
+                <header>
+                    <div className="container page-header">
+                        <img src="./assets/logo.png" alt="Logo"/>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#">Przedszkole</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dzieci</a>
+                                </li>
+                                <li>
+                                    <a href="#">Obecność</a>
+                                </li>
+                                <li>
+                                    <a href="#">Wydarzenia</a>
+                                </li>
+                                <li>
+                                    <a href="#">Opłaty</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </header>
+                {/*<div className={'title-container'}>*/}
+                {/*    <img src={'./assets/logo.png'} />*/}
+                {/*</div>*/}
                 <div className={'day-picker-container'}>
                     <DayPicker
                         selectedDays={this.state.selectedDays}

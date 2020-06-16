@@ -2,7 +2,7 @@ import React from "react";
 import Child from './Child';
 
 const ChildrenList = ({children}) => {
-    console.log(children);
+    // console.log(children);
     return (
         <>
             <div className={'title'}>
@@ -13,7 +13,7 @@ const ChildrenList = ({children}) => {
                     <h1>Lista dzieci</h1>
                     <div>
                         <ul>
-                            {children.map(child => <li>{child.id}</li>)}
+                            {children.map(child => <li key={child.id}>{child[child.id].first_name}</li>)}
                         </ul>
                     </div>
                 </div>

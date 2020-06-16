@@ -29,3 +29,7 @@ class Child(models.Model):
 
     def __str__(self):
         return "{} {}, {}".format(self.first_name, self.last_name, self.team)
+
+    @property
+    def team_name(self):
+        return self.team.name
