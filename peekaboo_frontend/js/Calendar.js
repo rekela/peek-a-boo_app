@@ -40,7 +40,9 @@ export default class Calendar extends Component {
             <>
                 <header>
                     <div className="container page-header">
-                        <img src="./assets/logo.png" alt="Logo"/>
+                        <div>
+                            <img src="./assets/logo.png" alt="Logo"/>
+                        </div>
                         <nav>
                             <ul>
                                 <li>
@@ -65,19 +67,22 @@ export default class Calendar extends Component {
                 {/*<div className={'title-container'}>*/}
                 {/*    <img src={'./assets/logo.png'} />*/}
                 {/*</div>*/}
-                <div className={'day-picker-container'}>
-                    <DayPicker
-                        selectedDays={this.state.selectedDays}
-                        onDayClick={this.handleDayClick}
-                    />
+                <div className={'main-view-container'}>
+                    <h1 className={'logo'}>Obecność</h1>
+                    <div className={'main-view'}>
+                        <div className={'day-picker-container'}>
+                            <DayPicker
+                                selectedDays={this.state.selectedDays}
+                                onDayClick={this.handleDayClick}
+                            />
+                        </div>
+                    </div>
                 </div>
                 <div className={'form-container'}>
-                    <div>
-                        <span>Ilość wybranych dni: {this.state.selectedDays.length} </span>
+                    <div className={'form-container-content'}>
+                        <div>Ilość wybranych dni: <strong> {this.state.selectedDays.length} </strong></div>
+                        <div>Chcesz zapisać nieobecność dla wskazanych dni?</div>
                         <button className={'btn'} onClick={this.handleClear}>Clear</button>
-                    </div>
-                    <div>
-                        <span>Zapisz nieobecność dla wskazanych dni </span>
                         <button className={'btn'}>Save</button>
                     </div>
                 </div>

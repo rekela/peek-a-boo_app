@@ -9,7 +9,7 @@ const Login = () => {
                 </div>
 
             </div>
-            <div className={'main-view'}>
+            <div className={'main-view-container'}>
                 <div className={'img-container'}>
                     <img src={'./assets/akuku_login.jpg'}/>
                 </div>
