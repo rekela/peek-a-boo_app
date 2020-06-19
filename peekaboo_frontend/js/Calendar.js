@@ -4,8 +4,6 @@ import "react-day-picker/lib/style.css";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const mainColor = 'rgb(255,207,65)';
-
 export default class Calendar extends Component {
     constructor(props) {
         super(props);
@@ -57,8 +55,8 @@ export default class Calendar extends Component {
                     <div className={'second-section-content'}>
                         <div>Ilość wybranych dni: <strong> {this.state.selectedDays.length} </strong></div>
                         <div>Chcesz zapisać nieobecność dla wskazanych dni?</div>
-                        <button className={'btn'} onClick={this.handleClear}>Zapisz</button>
-                        <button className={'btn'}>Wyczyść</button>
+                        <button className={'btn'}>Zapisz</button>
+                        <button className={'btn'} onClick={this.handleClear}>Wyczyść</button>
                     </div>
                 </div>
 

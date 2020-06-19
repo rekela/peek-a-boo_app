@@ -1,6 +1,12 @@
 import React from "react";
+import ChildrenList from "./ChildrenList";
 
 const Header = () => {
+    const handleClick = () => {
+        return(
+            <ChildrenList/>
+        )
+    }
     return(
         <header>
             <div className="container page-header">
@@ -10,10 +16,10 @@ const Header = () => {
                 <nav>
                     <ul>
                         <li>
-                            <a href="#">Przedszkole</a>
+                            <a href="/">Przedszkole</a>
                         </li>
                         <li>
-                            <a href="#">Dzieci</a>
+                            <a href="/children-list/" onClick={handleClick}>Dzieci</a>
                         </li>
                         <li>
                             <a href="#">Obecność</a>

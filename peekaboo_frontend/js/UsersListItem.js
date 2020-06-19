@@ -2,7 +2,7 @@ import React from "react";
 
 const UsersListItem = ({user}) => {
     return(
-        <li>{user.username}</li>
+        <li className={'item'}>{user.username}</li>
     )
 }
 

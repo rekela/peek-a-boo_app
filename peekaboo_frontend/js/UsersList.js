@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import UsersListItem from "./UsersListItem";
 import Header from "./Header";
-import ChildrenListItem from "./ChildrenListItem";
 import Footer from "./Footer";
 
 const UsersList = () => {
@@ -21,7 +20,7 @@ const UsersList = () => {
                 <h1 className={'logo'}>Lista użytkowników</h1>
                 <div className={'main-view'}>
                     <div>
-                        <ul>
+                        <ul className={'item'}>
                             {users.map(user => <UsersListItem key={user.id} user={user} />)}
                         </ul>
                     </div>

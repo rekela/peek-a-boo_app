@@ -25,7 +25,7 @@ const Login = () => {
                     <h1 className={'logo'}>Witaj w peek-a-boo :)</h1>
                 </div>
             </div>
-            <div className={'main-view-container'}>
+            <div className={'login-view-container'}>
                 <div className={'img-container'}>
                     <img src={'./assets/akuku_login.jpg'}/>
                 </div>

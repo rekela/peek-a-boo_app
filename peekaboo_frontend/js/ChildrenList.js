@@ -26,7 +26,7 @@ const ChildrenList = () => {
                     </div>
                 </div>
             </div>
-
+            {/*{children.map(child => <Child key={child.id} child={child}/>)}/>*/}
             <Footer/>
         </>
     )

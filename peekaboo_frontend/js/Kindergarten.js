@@ -8,11 +8,20 @@ const Kindergarten = () => {
             <Header/>
 
             <div className={'main-view-container'}>
+                {/*<div className={'welcome'}>*/}
+                {/*    <h1 className={'logo'}>Witaj ... w peek-a-boo :)</h1>*/}
+                {/*</div>*/}
+
                 <h1 className={'logo'}>Twoja Placówka</h1>
                 <div className={'main-view'}>
-                    <div>Przedszkole A Kuku
-                        Osiedle Piastów 21B
-                        31-624 Kraków
+                    <div>
+                        <h3>Przedszkole A Kuku</h3>
+                        <div className={'data-container'}>
+                            <div>Osiedle Piastów 21B</div>
+                            <div>31-624 Kraków</div>
+                            <div>Tel.: 790 538 050</div>
+                            <div>E-mail: biuro@przedszkole-akuku.pl</div>
+                        </div>
                     </div>
                 </div>
             </div>
