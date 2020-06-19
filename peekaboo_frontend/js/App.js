@@ -5,6 +5,8 @@ import Calendar from "./Calendar";
 import Kindergarten from "./Kindergarten";
 import UsersList from "./UsersList";
 import ChildrenList from "./ChildrenList";
+import Footer from "./Footer";
+import Child from "./Child";
 
 // export class App extends Component {
 //     state = {
@@ -19,12 +21,7 @@ import ChildrenList from "./ChildrenList";
 //     }
 //     render() {
 //         return (
-//             <div>
-//                 <h1>Lista dzieci</h1>
-//                 <h3>{this.state.children[0]}</h3>
-//                 {/*<ChildrenList children={this.state.children} />*/}
-//             </div>
-//
+//             <ChildrenList children={this.state.children} />
 //         );
 //     }
 // }
@@ -34,5 +31,11 @@ const App = () => {
         <Calendar/>
     )
 }
+
+// const App = () => {
+//     return(
+//         <Login/>
+//     )
+// }
 
 ReactDOM.render(<App />, document.getElementById("app"));

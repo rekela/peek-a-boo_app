@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import DayPicker, { DateUtils } from 'react-day-picker';
 import "react-day-picker/lib/style.css";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const mainColor = 'rgb(255,207,65)';
 
@@ -38,35 +40,8 @@ export default class Calendar extends Component {
     render() {
         return (
             <>
-                <header>
-                    <div className="container page-header">
-                        <div>
-                            <img src="./assets/logo.png" alt="Logo"/>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li>
-                                    <a href="#">Przedszkole</a>
-                                </li>
-                                <li>
-                                    <a href="#">Dzieci</a>
-                                </li>
-                                <li>
-                                    <a href="#">Obecność</a>
-                                </li>
-                                <li>
-                                    <a href="#">Wydarzenia</a>
-                                </li>
-                                <li>
-                                    <a href="#">Opłaty</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
-                {/*<div className={'title-container'}>*/}
-                {/*    <img src={'./assets/logo.png'} />*/}
-                {/*</div>*/}
+               <Header/>
+
                 <div className={'main-view-container'}>
                     <h1 className={'logo'}>Obecność</h1>
                     <div className={'main-view'}>
@@ -78,14 +53,16 @@ export default class Calendar extends Component {
                         </div>
                     </div>
                 </div>
-                <div className={'form-container'}>
-                    <div className={'form-container-content'}>
+                <div className={'second-section'}>
+                    <div className={'second-section-content'}>
                         <div>Ilość wybranych dni: <strong> {this.state.selectedDays.length} </strong></div>
                         <div>Chcesz zapisać nieobecność dla wskazanych dni?</div>
                         <button className={'btn'} onClick={this.handleClear}>Clear</button>
                         <button className={'btn'}>Save</button>
                     </div>
                 </div>
+
+                <Footer/>
             </>
         );
     }

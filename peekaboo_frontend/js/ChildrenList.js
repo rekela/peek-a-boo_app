@@ -1,23 +1,26 @@
 import React from "react";
 import Child from './Child';
+import Header from "./Header";
+import Footer from "./Footer";
 
 const ChildrenList = ({children}) => {
-    // console.log(children);
+    console.log(children);
     return (
         <>
-            <div className={'title'}>
-                <img src={'./assets/logo.png'} />
-            </div>
-            <div className={'form-container'}>
-                <div>
-                    <h1>Lista dzieci</h1>
+            <Header/>
+
+            <div className={'main-view-container'}>
+                <h1 className={'logo'}>Lista dzieci</h1>
+                <div className={'main-view'}>
                     <div>
                         <ul>
-                            {children.map(child => <li key={child.id}>{child[child.id].first_name}</li>)}
+                            {children.map(child => <li className={'item'} key={child.id}>{child.first_name}</li>)}
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <Footer/>
         </>
     )
 };
