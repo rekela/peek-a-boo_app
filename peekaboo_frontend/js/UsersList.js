@@ -1,22 +1,34 @@
-import React from "react";
+import React, {useState} from "react";
+import UsersListItem from "./UsersListItem";
+import Header from "./Header";
+import ChildrenListItem from "./ChildrenListItem";
+import Footer from "./Footer";
 
-const UsersList = (props) => {
-    console.log(props);
+const UsersList = () => {
+    const [users, setUsers] = useState([]);
+    const url = 'http://127.0.0.1:8000/users-list/';
+    fetch(url).then(response => {
+        return response.json();
+    }).then(obj => {
+        setUsers(obj);
+    })
     return (
+
         <>
-            <div className={'title'}>
-                <img src={'./assets/logo.png'} />
-            </div>
-            <div className={'form-container'}>
-                <div>
-                    <h1>Lista użytkowników</h1>
+            <Header/>
+
+            <div className={'main-view-container'}>
+                <h1 className={'logo'}>Lista użytkowników</h1>
+                <div className={'main-view'}>
                     <div>
                         <ul>
-                            {props.users.map(user => <li>{user}</li>)}
+                            {users.map(user => <UsersListItem key={user.id} user={user} />)}
                         </ul>
                     </div>
                 </div>
             </div>
+
+            <Footer/>
         </>
     )
 };

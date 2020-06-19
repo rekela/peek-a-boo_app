@@ -7,6 +7,7 @@ import UsersList from "./UsersList";
 import ChildrenList from "./ChildrenList";
 import Footer from "./Footer";
 import Child from "./Child";
+import Header from "./Header";
 
 // export class App extends Component {
 //     state = {
@@ -18,6 +19,10 @@ import Child from "./Child";
 //             .then(json => {
 //                 this.setState(json)});
 //         // console.log(this.state.children);
+//         // const myPromise = new Promise((resolve, reject) => {
+//         //     resolve(this.state.children);
+//         // });
+//
 //     }
 //     render() {
 //         return (
@@ -28,7 +33,8 @@ import Child from "./Child";
 
 const App = () => {
     return(
-        <Calendar/>
+        <UsersList/>
+
     )
 }
 

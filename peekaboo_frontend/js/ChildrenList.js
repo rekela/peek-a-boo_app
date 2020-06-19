@@ -1,10 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import Child from './Child';
 import Header from "./Header";
 import Footer from "./Footer";
+import ChildrenListItem from "./ChildrenListItem";
 
-const ChildrenList = ({children}) => {
-    console.log(children);
+const ChildrenList = () => {
+    const [children, setChildren] = useState([]);
+    const url = 'http://127.0.0.1:8000/children-list/';
+    fetch(url).then(response => {
+        return response.json();
+    }).then(obj => {
+        setChildren(obj);
+    })
     return (
         <>
             <Header/>
@@ -14,7 +21,7 @@ const ChildrenList = ({children}) => {
                 <div className={'main-view'}>
                     <div>
                         <ul>
-                            {children.map(child => <li className={'item'} key={child.id}>{child.first_name}</li>)}
+                            {children.map(child => <ChildrenListItem key={child.id} child={child} />)}
                         </ul>
                     </div>
                 </div>

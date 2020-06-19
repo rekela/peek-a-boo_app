@@ -57,8 +57,8 @@ export default class Calendar extends Component {
                     <div className={'second-section-content'}>
                         <div>Ilość wybranych dni: <strong> {this.state.selectedDays.length} </strong></div>
                         <div>Chcesz zapisać nieobecność dla wskazanych dni?</div>
-                        <button className={'btn'} onClick={this.handleClear}>Clear</button>
-                        <button className={'btn'}>Save</button>
+                        <button className={'btn'} onClick={this.handleClear}>Zapisz</button>
+                        <button className={'btn'}>Wyczyść</button>
                     </div>
                 </div>
 

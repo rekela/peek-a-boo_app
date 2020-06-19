@@ -1,7 +1,20 @@
-import React from "react";
+import React, {useState} from "react";
 import Footer from "./Footer";
 
 const Login = () => {
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("")
+
+    const handleUsername = (e) => {
+        setUsername(e.target.value)
+        console.log(username)
+    }
+
+    const handlePassword = (e) => {
+        setPassword(e.target.value)
+        console.log(password)
+    }
+
     const handleClick = () => {
         console.log('button clicked')
     }
@@ -20,8 +33,10 @@ const Login = () => {
             <div className={'form-container'}>
                 <form>
                     <h5 className={'popup'}>Podany login lub hasło są nieprawidłowe</h5>
-                    <input className={'form-input'} type="text" name="login" placeholder="username" />
-                    <input className={'form-input'} type="password" name="password" placeholder="password" />
+                    <input className={'form-input'} type="text" name="login" placeholder="username"
+                           value={username} onChange={handleUsername}/>
+                    <input className={'form-input'} type="password" name="password" placeholder="password"
+                           value={password} onChange={handlePassword}/>
                     <button onClick={handleClick} className={'btn'} type="submit">Zaloguj</button>
                 </form>
             </div>
