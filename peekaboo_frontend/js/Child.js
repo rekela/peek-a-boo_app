@@ -2,19 +2,17 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const Child = () => {
+const Child = ({child, setDetailsHandler}) => {
     return (
         <>
-            <Header/>
-            <div className={'main-view-container'}>
+            <div className={'main-view-container2'}>
                 <h1 className={'logo'}>Dane dziecka</h1>
-                <div className={'main-view'}>
-                    <h1>...... TBD</h1>
+                <div className={'main-view2'}>
+                    <h1>{child.first_name} {child.last_name}</h1>
+                    <button className={'btn'} onClick={()=> setDetailsHandler(null)}>Zamknij</button>
                 </div>
-                {/*<div>{child.first_name} {child.last_name}</div>*/}
             </div>
 
-            <Footer/>
         </>
     );
 };

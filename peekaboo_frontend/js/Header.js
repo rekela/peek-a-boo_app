@@ -1,5 +1,15 @@
 import React from "react";
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+} from 'react-router-dom';
 import ChildrenList from "./ChildrenList";
+import Login from "./Login";
+import Kindergarten from "./Kindergarten";
+import Calendar from "./Calendar";
 
 const Header = () => {
     const handleClick = () => {
@@ -10,30 +20,34 @@ const Header = () => {
     return(
         <header>
             <div className="container page-header">
+                {/*<div>*/}
+                {/*    <img src="./assets/logo.png" alt="Logo"/>*/}
+                {/*</div>*/}
                 <div>
-                    <img src="./assets/logo.png" alt="Logo"/>
+                    <Link to="/"><img src="./assets/logo.png" alt="Logo"/></Link>
                 </div>
                 <nav>
                     <ul>
                         <li>
-                            <a href="/">Przedszkole</a>
+                            <Link to="/about">Przedszkole</Link>
                         </li>
                         <li>
-                            <a href="/children-list/" onClick={handleClick}>Dzieci</a>
+                            <Link to="/children">Dzieci</Link>
                         </li>
                         <li>
-                            <a href="#">Obecność</a>
+                            <Link to="/calendar">Obecność</Link>
                         </li>
                         <li>
-                            <a href="#">Wydarzenia</a>
+                            <Link to="#">Wydarzenia</Link>
                         </li>
                         <li>
-                            <a href="#">Opłaty</a>
+                            <Link to="#">Opłaty</Link>
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
+
     )
 }
 export default Header;

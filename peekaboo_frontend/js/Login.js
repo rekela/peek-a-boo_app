@@ -1,7 +1,6 @@
 import React, {useState} from "react";
-import Footer from "./Footer";
 
-const Login = () => {
+const Login = ({ onLoginSuccess }) => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("")
 
@@ -16,7 +15,7 @@ const Login = () => {
     }
 
     const handleClick = () => {
-        console.log('button clicked')
+        onLoginSuccess(true);
     }
     return (
         <>
@@ -41,7 +40,6 @@ const Login = () => {
                 </form>
             </div>
 
-            <Footer/>
         </>
     )
 };

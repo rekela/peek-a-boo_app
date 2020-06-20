@@ -38,7 +38,6 @@ export default class Calendar extends Component {
     render() {
         return (
             <>
-               <Header/>
 
                 <div className={'main-view-container'}>
                     <h1 className={'logo'}>Obecność</h1>
@@ -60,7 +59,6 @@ export default class Calendar extends Component {
                     </div>
                 </div>
 
-                <Footer/>
             </>
         );
     }

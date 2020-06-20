@@ -5,15 +5,14 @@ import Footer from "./Footer";
 const Kindergarten = () => {
     return (
         <>
-            <Header/>
 
-            <div className={'main-view-container'}>
+            <div className={'main-view-container2'}>
                 {/*<div className={'welcome'}>*/}
                 {/*    <h1 className={'logo'}>Witaj ... w peek-a-boo :)</h1>*/}
                 {/*</div>*/}
 
                 <h1 className={'logo'}>Twoja Placówka</h1>
-                <div className={'main-view'}>
+                <div className={'main-view2'}>
                     <div>
                         <h3>Przedszkole A Kuku</h3>
                         <div className={'data-container'}>
@@ -26,7 +25,6 @@ const Kindergarten = () => {
                 </div>
             </div>
 
-            <Footer/>
         </>
     );
 }

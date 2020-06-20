@@ -1,8 +1,21 @@
 import React from "react";
+import Child from "./Child";
 
-const ChildrenListItem = ({child}) => {
+const ChildrenListItem = ({child, details}) => {
+    const handleClick = () => {
+        details(child);
+    }
     return(
-        <li>{child.first_name} {child.last_name}</li>
+
+        <>
+            <li >
+                <div>
+                    <p>{child.first_name} {child.last_name}</p>
+                    <button className={'btn'} onClick={handleClick}>Dane</button>
+                </div>
+            </li>
+        </>
+
     )
 }
 

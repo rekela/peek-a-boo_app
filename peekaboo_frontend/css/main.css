@@ -23,11 +23,18 @@ body{
     font-family: 'Dancing Script', cursive;
     font-size: 3em;
     padding-bottom: 10px;
+    text-align: center;
 }
 .welcome{
-    width: 100%;
     background-color: var(--text-color);
     color: var(--main-color);
+    height: 30vh;
+    width: 70vw;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vh;
 }
 .title-container{
     background-color: var(--main-color);
@@ -74,6 +81,23 @@ body{
         width: 80%;
         font-size: 2em;
     }
+
+.main-view-container2 {
+    padding: 3vh;
+    height: 80vh;
+    width: 70vh;
+}
+.main-view2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70%;
+    width: 70%;
+}
+.main-view2 > div{
+    width: 80%;
+    font-size: 2em;
+}
 
 .data-container{
     font-size: 1.5rem;
@@ -197,4 +221,5 @@ body{
     }
 .item{
     text-decoration: none;
+    font-size: medium;
 }
