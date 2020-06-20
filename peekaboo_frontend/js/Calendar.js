@@ -41,7 +41,7 @@ export default class Calendar extends Component {
 
                 <div className={'main-view-container'}>
                     <h1 className={'logo'}>Obecność</h1>
-                    <div className={'main-view'}>
+                    <div className={'main-view2'}>
                         <div className={'day-picker-container'}>
                             <DayPicker
                                 selectedDays={this.state.selectedDays}

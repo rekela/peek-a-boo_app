@@ -22,12 +22,24 @@ const ChildrenList = () => {
             <>
                 <div className={'main-view-container2'}>
                     <h1 className={'logo'}>Lista dzieci</h1>
-                    <div className={'main-view2'}>
-                        <div>
-                            <ul className={'item'}>
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Lp</th>
+                                    <th>Imię i nazwisko</th>
+                                    <th>Grupa</th>
+                                    <th>Szczegóły</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 {children.map(child => <ChildrenListItem key={child.id} child={child} details={setDetails}/>)}
-                            </ul>
-                        </div>
+                            </tbody>
+                        </table>
+                        <button className={'btn-yellow' + ' ' + 'btn'}>Dodaj</button>
+                        {/*<div>*/}
+                        {/*        {children.map(child => <ChildrenListItem key={child.id} child={child} details={setDetails}/>)}*/}
+                        {/*</div>*/}
                     </div>
                 </div>
             </>

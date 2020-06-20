@@ -71,6 +71,7 @@ body{
     width: 70vh;
 }
     .main-view{
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -97,6 +98,16 @@ body{
 .main-view2 > div{
     width: 80%;
     font-size: 2em;
+}
+.main-view3 {
+    margin-top: 10vh;
+}
+table {
+    width: 100%;
+    margin-top: 10vh;
+}
+th {
+    text-align: left;
 }
 
 .data-container{
@@ -148,7 +159,9 @@ body{
             float: right;
             border: solid 1px var(--main-color);
 }
-
+.btn-yellow {
+    background-color: var(--main-color);
+}
 .popup{
     visibility: hidden;
     color: red;
@@ -200,9 +213,7 @@ body{
     }
 
 .day-picker-container{
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
+    margin-top: 10vh;
 }
 .page-footer{
     background-color: var(--main-color);
@@ -222,4 +233,8 @@ body{
 .item{
     text-decoration: none;
     font-size: medium;
+}
+
+.table-yellow > thead > tr > td{
+    border-bottom: 1px solid var(--main-color);
 }

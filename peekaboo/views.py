@@ -19,12 +19,8 @@ class GroupViewSet(viewsets.ModelViewSet):
 
 
 class UsersList(APIView):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
-
     def get(self, request, format=None):
-        queryset = self.get_queryset()
-        serializer = UserSerializer(queryset, many=True)
+        serializer = UserSerializer(User.objects.all(), many=True)
         return Response(serializer.data)
 
 
@@ -42,13 +38,13 @@ class ChildrenList(APIView):
             return Response(serializer.data)
         return Response(serializer.errors, status=Http404)
 
-#
-# class ChildView(APIView):
-#     def get_object(self, child_id):
-#         return Child.object.get(pk=child_id)
-#
-#     def get(self, request, child_id, format=None):
-#         child = self.get_object(child_id)
-#         serializer = ChildSerializer(child)
-#         return Response(serializer.data)
+
+class ChildView(APIView):
+    def get_object(self, child_id):
+        return Child.object.get(pk=child_id)
+
+    def get(self, request, child_id, format=None):
+        child = self.get_object(child_id)
+        serializer = ChildSerializer(child)
+        return Response(serializer.data)
 
